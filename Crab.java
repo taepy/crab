@@ -14,6 +14,27 @@ public class Crab extends Animal
      */
     public void act() 
     {
-        // Add your action code here.
+       moveAndTurn();
+       eat();
+    }
+    public void moveAndTurn() {
+        if(Greenfoot.isKeyDown("left")) {
+            move(-10);
+        }
+        if(Greenfoot.isKeyDown("right")) {
+            move(10);
+        }
+        
+        turn(5);
+    }
+    public void eat() {
+        Actor worm;
+        worm = getOneObjectAtOffset(0, 0, Worm.class);
+        if(worm != null) {
+            World world;
+            world = getWorld();
+            world.removeObject(worm);
+            world.getObjects(Score.class).get(0).addScore(50);
+        }
     }
 }

@@ -46,5 +46,10 @@ public class MyWorld extends World
         addObject(score,58,43);
         score.setLocation(60,31);
         score.setLocation(51,20);
+        removeObject(score);
+        Score score2 = new Score();
+        addObject(score2,94,29);
+        score2.setLocation(78,21);
+        score2.setLocation(83,27);
     }
 }

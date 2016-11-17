@@ -12,10 +12,11 @@ public class Score extends Actor
     private int score;
     public Score() {
         this.score = 0;
-        setImage(new GreenfootImage("Score : " + score, 24, Color.BLACK, new Color(0x000000FF, true)));
+        setImage(new GreenfootImage(String.format("Score : %10d", score), 24, Color.BLACK, new Color(0x000000FF, true)));
     }
     public void act() {}
     public void addScore(int score) {
         this.score += score;
+        setImage(new GreenfootImage(String.format("Score : %10d", this.score), 24, Color.BLACK, new Color(0x000000FF, true)));
     }             
 }

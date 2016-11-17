@@ -1,12 +1,12 @@
 #Greenfoot properties
-#Thu Nov 17 15:35:03 KST 2016
+#Thu Nov 17 16:31:21 KST 2016
 project.charset=UTF-8
 mainWindow.height=600
 version=2.8.0
 class.MyWorld.image=sand2.jpg
-class.Score.superclass=greenfoot.Actor
 world.lastInstantiated=MyWorld
 class.MyWorld.superclass=greenfoot.World
+class.Score.superclass=greenfoot.Actor
 class.Crab.superclass=greenfoot.Actor
 class.Lobster.superclass=greenfoot.Actor
 class.Worm.superclass=greenfoot.Actor
