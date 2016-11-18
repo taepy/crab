@@ -13,10 +13,15 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+   
+    
+    
+    
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+           
         prepare();
     }
 
@@ -26,6 +31,10 @@ public class MyWorld extends World
      */
     private void prepare()
     {
+        
+        Score score = new Score();
+        addObject(score,94,29);
+     
         Crab crab = new Crab();
         addObject(crab,464,214);
         Lobster lobster = new Lobster();
@@ -42,14 +51,12 @@ public class MyWorld extends World
         addObject(worm5,151,340);
         Turtle turtle = new Turtle();
         addObject(turtle,260,338);
-        Score score = new Score();
-        addObject(score,58,43);
-        score.setLocation(60,31);
-        score.setLocation(51,20);
-        removeObject(score);
-        Score score2 = new Score();
-        addObject(score2,94,29);
-        score2.setLocation(78,21);
-        score2.setLocation(83,27);
+        
+        
+    }
+    
+    public void newScore()
+    {
+        
     }
 }

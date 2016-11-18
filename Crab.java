@@ -8,10 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Crab extends Animal
 {
+    //int X = Greenfoot.getRandomNumber(500);
+    //int Y = Greenfoot.getRandomNumber(400);
     /**
      * Act - do whatever the Crab wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Crab() {
+        this.speed = 3;
+    }
     public void act() 
     {
        moveAndTurn();
@@ -19,22 +24,29 @@ public class Crab extends Animal
     }
     public void moveAndTurn() {
         if(Greenfoot.isKeyDown("left")) {
-            move(-10);
+            move(-1 * speed);
         }
         if(Greenfoot.isKeyDown("right")) {
-            move(10);
+            move(speed);
         }
         
-        turn(5);
+        turn(speed);
     }
     public void eat() {
         Actor worm;
+        Score score =  (Score)getOneObjectAtOffset(-(this.getX())+94, -(this.getY())+29, Score.class);
         worm = getOneObjectAtOffset(0, 0, Worm.class);
         if(worm != null) {
             World world;
             world = getWorld();
             world.removeObject(worm);
-            world.getObjects(Score.class).get(0).addScore(50);
+            int X = Greenfoot.getRandomNumber(500);
+            int Y = Greenfoot.getRandomNumber(400);
+            world.addObject(new Worm(), X, Y);
+            score.addScore(10);
         }
     }
+   
+    
+    
 }

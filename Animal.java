@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Animal extends Actor
 {
-    private int x, y;
+    protected int x, y;
+    protected int speed;
     public void act() 
     {
         // Add your action code here.

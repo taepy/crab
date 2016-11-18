@@ -16,4 +16,9 @@ public class Worm extends Animal
     {
         // Add your action code here.
     }    
+    
+    public void removeWorm()
+    {
+        World world = getWorld();
+    }
 }
