@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=void\ act()
 comment3.params=score
 comment3.target=void\ addScore(int)
-numComments=4
+comment4.params=
+comment4.target=void\ checkScore()
+numComments=5
