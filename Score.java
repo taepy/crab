@@ -33,6 +33,7 @@ public class Score extends Actor
         
         if(score == 250) { 
             getWorld().showText("VICTORY", 300,200); // 250점 획득시 승리
+            Greenfoot.stop();
         }
     }
 }

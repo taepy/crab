@@ -46,6 +46,7 @@ public class Lobster extends Animal
             World world;
             world = getWorld();
             world.removeObject(crab);
+            Greenfoot.stop();
             world.showText("GAME OVER", 300,200);
         }
     }
