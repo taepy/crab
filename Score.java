@@ -23,12 +23,16 @@ public class Score extends Actor
     
     public void checkScore()
     {
-        if(score%100 ==0)
+        if(score%100 ==0) // 100점마다 랍스터 추가
         {
             World world;
             world = getWorld();
             
             world.addObject(new Lobster(), 87, 229);
+        }
+        
+        if(score == 250) { 
+            getWorld().showText("VICTORY", 300,200); // 250점 획득시 승리
         }
     }
 }
